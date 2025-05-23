@@ -9,7 +9,12 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
   }
 });
 
-function SALVA(){	
+function SALVA(){
+
+	if(window.location.href.toString().includes('Login.aspx')){
+		document.getElementsByClassName('WidthLoghiBandaBlu')[0].parentElement.parentElement.style.display = 'none'
+	}
+	
 	if(window.location.href.toString().includes('TelefonateGestione_S.aspx')){
 		document.getElementById('ctl00_body_lblMotivo').style.whiteSpace = "pre-wrap";
 	}
